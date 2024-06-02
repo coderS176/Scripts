@@ -45,7 +45,7 @@ def getCodechefContests():
         # Add 2 hours to the start time for the duration
         end_time = start_time + timedelta(hours=2)
         # Format start time and duration as ISO 8601 strings
-        start_time_iso = start_time.strftime('%Y-%m-%dT%H:%M:%S%z')
+        start_time_iso = start_time.strftime('%Y-%m-%dT%H:%M:%S')
         duration_iso = "PT2H"  # Duration is 2 hours
         # Define the total number of questions
         total_questions = 8
@@ -87,7 +87,7 @@ def generate_leetcode_contests(contest_type, num_days, start_date, contest_num):
         # Add 1.5 hours to the start time for the duration
         end_time = start_time + timedelta(hours=1, minutes=30)
         # Format start time and duration as ISO 8601 strings
-        start_time_iso = start_time.strftime('%Y-%m-%dT%H:%M:%S%z')
+        start_time_iso = start_time.strftime('%Y-%m-%dT%H:%M:%S')
         duration_iso = "PT1H30M"  # Duration is 1.5 hours
         # Define the total number of questions
         total_questions = 4
@@ -136,3 +136,5 @@ def getLeetcodecontests():
         "biweekly", 5, next_biweekly_start, int(current_biweekly_contest_num))
 
     return weekly_contests + biweekly_contests
+
+print(getLeetcodecontests())

@@ -66,17 +66,20 @@ def get_user_data(driver, userinfo):
         # Extracting total problems solved
         problems_section = soup.find(
             'section', class_='rating-data-section problems-solved')
+        # print(problems_section)
         if problems_section:
             # Find and process headings within the problems section
             headings = problems_section.find_all('h3')
             userinfo['number_of_questions'] = int(0)
             for heading in headings:
                 # Check if the heading text matches the pattern for problem count
-                match = re.search(r'([a-zA-Z\s]+)\s\((\d+)\):', heading.text)
-                if match:
-                    # problem_type = match.group(1).strip()
-                    problems_solved = int(match.group(2))
-                    userinfo['number_of_questions'] += problems_solved
+                if 'Total Problems Solved' in heading.text:
+                    # print(heading)
+                    match = re.search(r'\d+', heading.text)
+                    if match:
+                        # problem_type = match.group(1).strip()
+                        problems_solved = int(match.group())
+                        userinfo['number_of_questions'] += problems_solved
                     # print("problemType:", problem_type)
 
     except Exception as e:
@@ -161,13 +164,14 @@ def get_user_submissions(driver, username):
                 (By.XPATH, "//table[@class='dataTable']/tbody")))
             page_count += 1
     except Exception as e:
-        print("An error occurred:", str(e))
+        # print("An error occurred:", str(e))
+        print("Error fetching data:")
 
     return codechef_submissions
 
 
 # driversetup function is defined in selenium_driver.py
-# driver = driversetup()
+driver = driversetup()
 
 # usernameInv = "pdk123" // Invalid user
 # usernameV = "princesharma74" // Valid user
@@ -175,10 +179,10 @@ def get_user_submissions(driver, username):
 # print(get_user_submissions(driver, usernameV)) // to check submissions of valid user
 # print(get_user_submissions(driver, usernameInv)) // to check submissions of invalid user
 
-# userinfov = {'id': 'princesharma74', 'rating': 3, 'global_rank': 1121,
-#           'number_of_contests': 12, 'number_of_questions': 34, 'user': 'princesharma74'}  // Valid userData
+userinfov = {'user_id': 'princesharma74', 'rating': 3, 'global_rank': 1121,
+             'number_of_contests': 12, 'number_of_questions': 34, 'user': 'princesharma74'}  # Valid userData
 
-# print(get_user_data(driver, userinfoV))  // to check user data of valid user
+print(get_user_data(driver, userinfov))  # to check user data of valid user
 
 # userinfoInv = {'id': 'pdk123', 'rating': null, 'global_rank': null,
 #         'number_of_contests': null, 'number_of_questions': null, 'user': 'pappu'}  // Invalid userData
