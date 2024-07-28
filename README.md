@@ -1,6 +1,6 @@
 I bet you don't know this,
 
-There is our project CodeBuddy 🚀 that brings together three popular coding platforms - #Leetcode, #Codechef, and #Codeforces - into a single hub for coding enthusiasts. On this platform, users can conveniently view their submissions and contest summaries from all three platforms in one place, as well as discover other users' profiles.
+There is our project CodeBuddy(CLC3) 🚀 that brings together three popular coding platforms - #Leetcode, #Codechef, and #Codeforces - into a single hub for coding enthusiasts. On this platform, users can conveniently view their submissions and contest summaries from all three platforms in one place, as well as discover other users' profiles.
 
 The team behind this endeavor consists of:
 
@@ -12,7 +12,7 @@ For those interested, here are some important links related to CodeBuddy:
 
 Presentation Link: https://drive.google.com/file/d/1AQsWQ_BKOgQA4tPajGX5lGUhr27q5vqj/view?usp=sharing
 
-Backend Scripts: https://github.com/princesharma74/CodeBuddy-Django-Project
+Backend Scripts: [https://github.com/princesharma74/CodeBuddy-Django-Project](https://github.com/coderS176/)
 
 Web Application Code: https://github.com/princesharma74/giggle-nextjs-codebuddy
 
