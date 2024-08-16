@@ -4,7 +4,7 @@ There is our project CodeBuddy(CLC3) 🚀 that brings together three popular cod
 
 The team behind this endeavor consists of:
 
-Shivam Gupta: 🛠️ Handling web scraping and APIs integration with expertise, utilizing #Python, #PlatformAPIs, #VS4, and #Docker. Prince Sharma: 💻 Responsible for backend development and web application functionalities, employing a tech stack that includes #MySQL, #Django, #AWS (Lambda), and #Zappa for the backend, and #Next.js and #Tailwind CSS for the web application. Arnav Gupta: 📱 Leading the Android application development efforts, utilizing #Flutter for seamless app development.
+Shivam Gupta: 🛠️ Handling web scraping and APIs integration with expertise, utilizing #Python, #PlatformAPIs, #VS4, and #Docker.\n Prince Sharma: 💻 Responsible for backend development and web application functionalities, employing a tech stack that includes #MySQL, #Django, #AWS (Lambda), and #Zappa for the backend, and #Next.js and #Tailwind CSS for the web application.\n Arnav Gupta: 📱 Leading the Android application development efforts, utilizing #Flutter for seamless app development.
 
 Moreover, the project introduces a unique feature called Room discussions. This feature fosters collaboration within the coding community, allowing users to engage in meaningful discussions, seek assistance, and share insights with fellow enthusiasts. 💬🤝
 
